@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "FullName": "Paracetamol",
+    "Notes": "Used for fever and pain relief ",
+    "ExpiryDate": "2026-05-30T00:00:00",
+    "Quantity": 50,
+    "Price": 10,
+    "Brand": "Crocin"
+  },
+  {
+    "Id": 2,
+    "FullName": "Ibuprofen",
+    "Notes": "Anti-inflammatory painkiller",
+    "ExpiryDate": "2026-05-30T00:00:00",
+    "Quantity": 30,
+    "Price": 15,
+    "Brand": "Brufen"
+  },
+  {
+    "Id": 3,
+    "FullName": "Amoxicillin",
+    "Notes": "Antibiotic for bacterial infections",
+    "ExpiryDate": "2026-04-25T00:00:00",
+    "Quantity": 100,
+    "Price": 10,
+    "Brand": "Mox"
+  },
+  {
+    "Id": 4,
+    "FullName": "Azithromycin",
+    "Notes": "Antibiotic for respiratory infections",
+    "ExpiryDate": "2026-04-24T00:00:00",
+    "Quantity": 200,
+    "Price": 19,
+    "Brand": "Azithral"
+  },
+  {
+    "Id": 5,
+    "FullName": "Cetirizine",
+    "Notes": "Antihistamine for allergic reactions",
+    "ExpiryDate": "2026-05-30T00:00:00",
+    "Quantity": 9,
+    "Price": 15,
+    "Brand": "Cetzine"
+  },
+  {
+    "Id": 6,
+    "FullName": "Metformin",
+    "Notes": "Glycemic agent for diabetes",
+    "ExpiryDate": "2027-12-31T00:00:00",
+    "Quantity": 8,
+    "Price": 17,
+    "Brand": "Glycomet"
+  },
+  {
+    "Id": 7,
+    "FullName": "Pantoprazole",
+    "Notes": "Pantocid for acid reflux and ulcers",
+    "ExpiryDate": "2026-05-30T00:00:00",
+    "Quantity": 11,
+    "Price": 19,
+    "Brand": "Pantocid"
+  },
+  {
+    "Id": 8,
+    "FullName": "Omeprazole",
+    "Notes": "Omez for acid reflux and ulcers",
+    "ExpiryDate": "2027-05-20T08:26:03.521Z",
+    "Quantity": 10,
+    "Price": 10,
+    "Brand": "Omez"
+  }
+]

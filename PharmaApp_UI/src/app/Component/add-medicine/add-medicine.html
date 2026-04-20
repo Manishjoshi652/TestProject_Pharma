@@ -1,0 +1,109 @@
+<div class="page-wrapper d-flex align-items-center justify-content-center px-3 py-5">
+  <div class="card page-card shadow-lg w-100">
+    <div class="card-body p-4 p-sm-5">
+      <div class="d-flex flex-column gap-3 mb-4">
+        <div>
+          <h1 class="h3 mb-1">Add New Medicine</h1>
+          <p class="text-muted mb-0">Fill in medicine details and save to inventory.</p>
+        </div>
+      </div>
+
+      <form (ngSubmit)="save()" class="row g-3" #medicineForm="ngForm">
+        <div class="col-12 col-md-6">
+          <label class="form-label">Medicine Name <span class="text-danger">*</span></label>
+          <input
+            class="form-control form-control-lg"
+            [(ngModel)]="medicine.fullName"
+            name="fullName"
+            placeholder="Enter medicine name"
+            required
+            #fullName="ngModel"
+            [class.is-invalid]="fullName.invalid && fullName.touched"
+            [class.is-valid]="fullName.valid && fullName.touched"
+          />
+          <div class="invalid-feedback" *ngIf="fullName.invalid && fullName.touched">
+            Medicine name is required.
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="form-label">Brand</label>
+          <input
+            class="form-control form-control-lg"
+            [(ngModel)]="medicine.brand"
+            name="brand"
+            placeholder="Enter brand"
+          />
+        </div>
+        <div class="col-12 col-md-4">
+          <label class="form-label">Expiry Date</label>
+          <input
+            class="form-control form-control-lg"
+            type="date"
+            [(ngModel)]="medicine.expiryDate"
+            name="expiryDate"
+          />
+        </div>
+        <div class="col-12 col-md-4">
+          <label class="form-label">Quantity <span class="text-danger">*</span></label>
+          <input
+            class="form-control form-control-lg"
+            type="number"
+            [(ngModel)]="medicine.quantity"
+            name="quantity"
+            placeholder="Stock quantity"
+            required
+            min="1"
+            #quantity="ngModel"
+            [class.is-invalid]="quantity.invalid && quantity.touched"
+            [class.is-valid]="quantity.valid && quantity.touched"
+          />
+          <div class="invalid-feedback" *ngIf="quantity.invalid && quantity.touched">
+            Quantity must be greater than 0.
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <label class="form-label">Price <span class="text-danger">*</span></label>
+          <input
+            class="form-control form-control-lg"
+            type="number"
+            [(ngModel)]="medicine.price"
+            name="price"
+            placeholder="Unit price"
+            required
+            min="0"
+            step="0.01"
+            #price="ngModel"
+            [class.is-invalid]="price.invalid && price.touched"
+            [class.is-valid]="price.valid && price.touched"
+          />
+          <div class="invalid-feedback" *ngIf="price.invalid && price.touched">
+            Price must be 0 or greater.
+          </div>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Notes</label>
+          <textarea
+            class="form-control form-control-lg"
+            rows="4"
+            [(ngModel)]="medicine.notes"
+            name="notes"
+            placeholder="Additional notes"
+          ></textarea>
+        </div>
+        <div class="col-12">
+          <div class="d-flex justify-content-between gap-6">
+            <button type="button" class="btn btn-outline-secondary" (click)="goBack()">Back to list</button>
+            <button
+              type="submit"
+              class="btn btn-primary px-5"
+              [disabled]="!isFormValid() || isSubmitting"
+            >
+              <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2" role="status"></span>
+              {{ isSubmitting ? 'Saving...' : 'Save Medicine' }}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
